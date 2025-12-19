@@ -31,6 +31,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <ImageView
+        android:id="@+id/iv_more"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toEndOf="@id/tv_time"
+        app:layout_constraintEnd_toStartOf="@id/tv_ready"
+        app:layout_constraintTop_toTopOf="@id/tv_ready"
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+
     <TextView
         android:id="@+id/tv_ready"
         android:text="Готово"
