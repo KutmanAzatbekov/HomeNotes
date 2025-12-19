@@ -5,21 +5,24 @@
     android:id="@+id/nav_host"
     app:startDestination="@id/mainFragment">
 
+
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.geeks.homenotes.ui.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+        <argument
+            android:name="note"
+            app:nullable="true"
+            app:argType="com.geeks.homenotes.data.models.NoteModel"/>
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.geeks.homenotes.ui.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
-
+        <action
+            android:id="@+id/action_mainFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/addNoteFragment"
-        android:name="com.geeks.homenotes.ui.AddNoteFragment"
-        android:label="fragment_add_note"
-        tools:layout="@layout/fragment_add_note" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.geeks.homenotes.ui.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
 </navigation>
