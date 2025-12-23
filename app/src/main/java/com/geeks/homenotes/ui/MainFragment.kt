@@ -42,10 +42,6 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        if (currentUser == null){
-            findNavController().navigate(R.id.authFragment)
-        }
         binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -64,11 +60,7 @@ class MainFragment : Fragment() {
         }
 
         binding.btnLogout.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
-            GoogleSignIn.getClient(requireContext(),gso).signOut()
-            val navOptions = NavOptions.Builder().setPopUpTo(R.id.mainFragment, true).build()
-            findNavController().navigate(R.id.authFragment, null, navOptions)
+            logout()
         }
 
         val user = FirebaseAuth.getInstance().currentUser
@@ -105,6 +97,17 @@ class MainFragment : Fragment() {
 
     private fun onClick(noteModel: NoteModel){
         findNavController().navigate(MainFragmentDirections.actionMainFragmentToAddNoteFragment(noteModel))
+    }
+
+    private fun logout(){
+        FirebaseAuth.getInstance().signOut()
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
+        val googleSignInClient = GoogleSignIn.getClient(requireActivity(),gso)
+
+        googleSignInClient.signOut().addOnCompleteListener {
+            val navOptions = NavOptions.Builder().setPopUpTo(R.id.mainFragment, true).build()
+            findNavController().navigate(R.id.authFragment, null, navOptions)
+        }
     }
 
 }
