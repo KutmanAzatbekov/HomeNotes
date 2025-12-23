@@ -2,4 +2,5 @@
     <string name="app_name">HomeNotes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_id">842646323062-1p613vtlnokas11ips8fjt6igacs2nif.apps.googleusercontent.com</string>
 </resources>

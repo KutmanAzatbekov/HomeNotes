@@ -5,4 +5,10 @@
     <color name="green">#91F48F</color>
     <color name="dark">#252525</color>
     <color name="orange">#D88B02</color>
+    <color name="yellow">#FFF599</color>
+    <color name="violet">#B69CFF</color>
+    <color name="pink">#FD99FF</color>
+    <color name="red">#FF9E9E</color>
+    <color name="blue">#9EFFFF</color>
+    <color name="grey">#CFCFCF</color>
 </resources>

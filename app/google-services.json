@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "842646323062",
+    "project_id": "noteshw7",
+    "storage_bucket": "noteshw7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842646323062:android:d686c47a061e47e7d4c457",
+        "android_client_info": {
+          "package_name": "com.geeks.homenotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842646323062-kbe6p5reb3pq3u6819nhpo60arvljfmf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geeks.homenotes",
+            "certificate_hash": "b0de85c887abfc78c14b2692a7acf22e1d30928c"
+          }
+        },
+        {
+          "client_id": "842646323062-1p613vtlnokas11ips8fjt6igacs2nif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxlWkJcYsy0e1O5wfPBMpWdp1LeWzU6xU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842646323062-1p613vtlnokas11ips8fjt6igacs2nif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
